@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple JS Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      width: 60px;
+      margin: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Simple Addition Calculator</h1>
+  <p>Enter two numbers:</p>
+
+  <input type="number" id="num1">
+  <input type="number" id="num2"><br>
+
+  <button onclick="calculateSum()">Add</button>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateSum() {
+      // variables
+      let a = document.getElementById("num1").value;
+      let b = document.getElementById("num2").value;
+
+      // convert string to number
+      let num1 = Number(a);
+      let num2 = Number(b);
+
+      // operator
+      let sum = num1 + num2;
+
+      // control statement
+      if (isNaN(sum)) {
+        document.getElementById("result").innerHTML = "Please enter valid numbers.";
+        alert("Invalid input!");
+      } else {
+        document.getElementById("result").innerHTML = "The sum is: " + sum;
+        console.log("Sum calculated: " + sum);
+        alert("Calculation complete!");
+      }
+    }
+  </script>
+
+</body>
+</html>

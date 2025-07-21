@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fade Toggle</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    .div1, .div2, .div3, .div4, .div5 {
+      padding: 70px;
+    }
+
+    .div1 { background-color: rgb(11, 114, 148); }
+    .div2 { background-color: rgb(9, 247, 9); }
+    .div3 { background-color: rgb(251, 251, 4); }
+    .div4 { background-color: rgb(248, 115, 135); }
+    .div5 {background-color: rgb(126, 124, 124);}
+    #button-container {
+      text-align: center;
+      margin-top: 20px;
+      display:block;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+    <script>
+        $(document).ready(function() {
+            $('#toggleBtn').click(function() {
+                $(".div1").fadeOut(5000);
+                $(".div2").fadeOut(4000);
+                $(".div3").fadeOut(3000);
+                $(".div4").fadeOut(2000);
+                $(".div5").fadeOut(1000);
+            });
+        });
+        $(document).ready(function() {
+            $('#toggleBtn').click(function() {
+                $(".div1").fadeIn(5000);
+                $(".div2").fadeIn(4000);
+                $(".div3").fadeIn(3000);
+                $(".div4").fadeIn(2000);
+                $(".div5").fadeIn(1000);
+            });
+        });
+    </script>    
+</head>
+<body>
+
+<div class="div1">
+  <div class="div2">
+    <div class="div3">
+      <div class="div4">
+        <div class="div5">
+          <div id="button-container">
+            <button id="toggleBtn">Click Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

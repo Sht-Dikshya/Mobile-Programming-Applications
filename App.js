@@ -49,18 +49,22 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header Bar */}
-      <View style={styles.header}>
-        <Text style={styles.headerText}>NutriTime</Text>
+
+       <View style={styles.header}>
+        <View style={styles.headerContent}>
+          <Image 
+            source={{ uri: 'https://marketplace.canva.com/ARZ8E/MAFmAUARZ8E/1/tl/canva-natural-leaf-icon.-100%25-naturals-vector-image-MAFmAUARZ8E.png' }}
+            style={styles.logo}
+          />
+          <Text style={styles.headerText}>NutriTime</Text>
+        </View>
       </View>
       
-      {/* Welcome Section */}
       <View style={styles.welcomeSection}>
         <Text style={styles.welcomeHeading}>Welcome to NutriTime</Text>
         <Text style={styles.tagline}>Eat smart. Live light.</Text>
       </View>
       
-      {/* Profile Image */}
       <View style={styles.profileImageContainer}>
         <Image 
           source={{ uri: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }} 
@@ -141,19 +145,29 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F1F8E9', // Light green background
+    backgroundColor: '#F1F8E9', 
   },
-  header: {
-    backgroundColor: '#4CAF50', // Green header
+ header: {
+    backgroundColor: '#4CAF50',
     paddingVertical: 15,
     paddingHorizontal: 20,
+    marginTop: 55, 
     alignItems: 'center',
     elevation: 4,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
-  },
+},
+  headerContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+},
+  logo: {
+    width: 30,
+    height: 30,
+    marginRight: 10,
+},
   headerText: {
     color: 'white',
     fontSize: 22,
@@ -194,7 +208,7 @@ const styles = StyleSheet.create({
   card: {
     margin: 20,
     padding: 20,
-    backgroundColor: '#E8F5E9', // Slightly darker green for the card
+    backgroundColor: '#E8F5E9', 
     borderRadius: 15,
     alignItems: 'center',
     elevation: 5,
@@ -262,7 +276,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   button: {
-    backgroundColor: '#4CAF50', // Green for the button
+    backgroundColor: '#4CAF50', 
     padding: 12,
     borderRadius: 10,
     width: '100%',
@@ -270,7 +284,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   buttonSecondary: {
-    backgroundColor: '#9E9E9E', // Gray for secondary button
+    backgroundColor: '#9E9E9E', 
     padding: 12,
     borderRadius: 10,
     width: '100%',
@@ -278,7 +292,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   checkButton: {
-    backgroundColor: '#8BC34A', // Light green for check button
+    backgroundColor: '#8BC34A', 
     padding: 12,
     borderRadius: 10,
     width: '100%',

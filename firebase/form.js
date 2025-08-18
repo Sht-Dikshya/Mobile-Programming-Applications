@@ -12,12 +12,11 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebas
     measurementId: "G-SW2ZESJMP4"
   };
 
-
 // Initialize Firebase app with the provided configuration
 const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
 
-// Create a reference to the 'users' node in the database
+// Create a reference to the 'admin' node in the database
 const userRef = ref(db, 'admin');
 
 // Get references to DOM elements
@@ -33,9 +32,6 @@ form.addEventListener('submit', function (e) {
 
 // This prevents the browser's default form behavior, which is to reload the page and send the form data to the server.
 // Since you're handling form submission using JavaScript (e.g., storing data in Firebase), you don’t want the page to reload — so you stop that default behavior here.
-
-
-
   // Get input values
   const name = nameInput.value;
   const email = emailInput.value;
